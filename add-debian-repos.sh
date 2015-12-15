@@ -76,8 +76,8 @@ check_gpg()
 funct_set_vars()
 {
 	# Set default user options
-	reponame="jessie"
-	backports_reponame="jessie-backports"
+	reponame="wheezy"
+	backports_reponame="wheezy-backports"
 	multimedia_reponame="deb-multimedia"
 	steamos_tools_reponame="steamos-tools"
 	
@@ -286,19 +286,19 @@ main()
 		fi
 
 		#####################################################
-		# Create and add required text to jessie.list
+		# Create and add required text to wheezy.list
 		#####################################################
 
-		# Debian jessie
+		# Debian wheezy
 		cat <<-EOF > ${sourcelist_tmp}
-		# Debian-jessie repo
-		deb http://httpredir.debian.org/debian/ jessie main contrib non-free
-		deb-src http://httpredir.debian.org/debian/ jessie main contrib non-free
+		# Debian-wheezy repo
+		deb http://httpredir.debian.org/debian/ wheezy main contrib non-free
+		deb-src http://httpredir.debian.org/debian/ wheezy main contrib non-free
 		EOF
 		
-		# Debian jessie-backports
+		# Debian wheezy-backports
 		cat <<-EOF > ${backports_sourcelist_tmp}
-		deb http://httpredir.debian.org/debian jessie-backports main
+		deb http://httpredir.debian.org/debian wheezy-backports main
 		EOF
 		
 		# packages.libregeek.org

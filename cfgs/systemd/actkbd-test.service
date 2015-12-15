@@ -1,8 +1,0 @@
-[Unit]
-Description=Actkbd: Daemon for X-independent shortcuts
-
-[Service]
-ExecStart=/usr/sbin/actkbd -Dd /dev/input/event3
-RemainAfterExit=yes
-Type=forking
-Restart=always

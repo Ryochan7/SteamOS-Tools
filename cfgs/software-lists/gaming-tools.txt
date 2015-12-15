@@ -1,4 +1,0 @@
-playonlinux
-wine
-jstest-gtk
-xboxdrv
