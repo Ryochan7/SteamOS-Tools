@@ -6,10 +6,7 @@
 # Script Ver:	0.3.1
 # Description:	This script automatically enables debian repositories
 #
-#		See: https://wiki.debian.org/AptPreferences#Pinning
-#
-# Usage:	./add-debian-repos [install|uninstall|--help]
-# Extra args:	--enable-testing
+#		See: https://wiki.debian.org/AptPreferences#Pinningf
 # ------------------------------------------------------------------------
 
 # remove old custom files
@@ -234,7 +231,7 @@ main()
 			
 			cat <<-EOF > ${steamos_tools_prefer_tmp}
 			Package: *
-			Pin: release n=brewmaster
+			Pin: release n=alchemist
 			Pin-Priority:150
 			EOF
 		
@@ -242,11 +239,11 @@ main()
 		
 			cat <<-EOF > ${steamos_tools_prefer_tmp}
 			Package: *
-			Pin: release n=brewmaster
+			Pin: release n=alchemist
 			Pin-Priority:150
 			
 			Package: *
-			Pin: release n=brewmaster_testing
+			Pin: release n=alchemist_testing
 			Pin-Priority:150
 			EOF
 			
@@ -306,19 +303,19 @@ main()
 		
 			cat <<-EOF > ${steamos_tools_sourcelist_tmp}
 			# Libregeek Debian repository
-			deb http://packages.libregeek.org/SteamOS-Tools/ brewmaster main games
-			deb-src http://packages.libregeek.org/SteamOS-Tools/ brewmaster main games
+			deb http://packages.libregeek.org/SteamOS-Tools/ alchemist main games
+			deb-src http://packages.libregeek.org/SteamOS-Tools/ alchemist main games
 			EOF
 			
 		elif [[ "$test_repo" == "yes" ]];then
 		
 			cat <<-EOF > ${steamos_tools_sourcelist_tmp}
 			# Libregeek Debian repository
-			deb http://packages.libregeek.org/SteamOS-Tools/ brewmaster main games
-			deb-src http://packages.libregeek.org/SteamOS-Tools/ brewmaster main games
+			deb http://packages.libregeek.org/SteamOS-Tools/ alchemist main games
+			deb-src http://packages.libregeek.org/SteamOS-Tools/ alchemist main games
 			
 			# Libregeek Debian testing repository
-			deb http://packages.libregeek.org/SteamOS-Tools/ brewmaster_testing main games
+			deb http://packages.libregeek.org/SteamOS-Tools/ alchemist main games
 			EOF
 			
 		fi
