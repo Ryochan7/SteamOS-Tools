@@ -33,13 +33,11 @@
 <h1>
 <a id="steamos-tools" class="anchor" href="#steamos-tools" aria-hidden="true"><span class="octicon octicon-link"></span></a>SteamOS-Tools</h1>
 
-<p>Version [See GitHub]</p>
-
 <p>Tools and scripts for SteamOS. Be sure to check out the <a href="https://github.com/ProfessorKaos64/SteamOS-Tools/wiki/Development-and-Features#upcoming-planned-features">Upcoming features</a> subsection on the wiki for the latest developments! For those of you that wish to contribute, suggest, or otherwise correct code, please first read the <a href="https://github.com/ProfessorKaos64/SteamOS-Tools/wiki/Development-and-Features">Development and Feautres</a> wiki page. Code corrections, additions, and all other suggestions can be made to the <a href="https://github.com/ProfessorKaos64/SteamOS-Tools/issues">issus</a> tracker.</p>
 
-<p>All operations are tested against official Valve releases only.</p>
+<p>All operations are tested against official Valve releases <em>only</em>.</p>
 
-<p>For the latest change details, please see the commits page, orchangelog.md for overall change details.</p>
+<p>For the latest change details, please see the commits page and changelog.md file for overall change details.</p>
 
 <h1>
 <a id="warning" class="anchor" href="#warning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Warning</h1>
@@ -51,6 +49,8 @@
 
 <p>Please refer to the <a href="https://github.com/ProfessorKaos64/SteamOS-Tools/wiki">wiki</a>, located to your right in this repository for all supplemental information and instructions. A direct link to the FAQ is <a href="https://github.com/ProfessorKaos64/SteamOS-Tools/wiki/FAQ">here</a>. Information for installations, as well as much more, is located within. If there is a page missing, or information you wish me to add, please let me know via an issues ticket.</p>
 
+<p>For SteamOS-specific help (aside from SteamOS-Tools), I do ask you visit and review the community SteamOS wiki at <a href="https://github.com/ValveSoftware/SteamOS/wiki">Valve's GitHub page</a> for all other topics. This is one area that I greatly appreciate help and support with. Please considering signing up or anonymously contributing to it. </p>
+
 <h1>
 <a id="hosted-packages" class="anchor" href="#hosted-packages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hosted packages</h1>
 
@@ -58,10 +58,12 @@
 
 <p><a href="https://github.com/ProfessorKaos64/SteamOS-Tools/wiki/SteamOS-Tools-Repository">SteamoS-Tools Repository</a></p>
 
+<p>Most package build scripts are hosted in a dedicatd GitHub repository, <a href="https://github.com/ProfessorKaos64/SteamOS-Tools-Packaging">SteamOS-Tools-Packaging</a>.</p>
+
 <h1>
 <a id="usage--installation" class="anchor" href="#usage--installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage / Installation</h1>
 
-<p>Please make sue you have enabled desktop mode (Settings &gt; Interface &gt; Enable access to the Linux desktop), and aset your password for the dekstop user with <code>passwd</code>.</p>
+<p>Please make sure you have enabled desktop mode (Settings &gt; Interface &gt; Enable access to the Linux desktop), and aset your password for the dekstop user with <code>passwd</code>.</p>
 
 <p>To clone this repository to your local computer, you will need the <code>git</code> software package to clone the repository. The command is included below in the first line below if you do not know it.</p>
 
@@ -87,16 +89,20 @@ git pull
 <a id="contents" class="anchor" href="#contents" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contents</h2>
 
 <ul>
-<li>artwork - banners and various images/artwork for SteamOS.</li>
+<li>artwork - Banners and various images/artwork for SteamOS.</li>
 <li>cfgs/ - various configuration files, including package lists for Debian software installations.</li>
-<li>docs/ - readme files for each script.</li>
-<li>ext-game-installers/ - Game installers for games outside Steam (e.g. GZDoom)</li>
-<li>extra/ - various extra scripts</li>
-<li>game-fixes - a location to store some small deployable fixes for games.</li>
-<li>scriptmodules/ - plugable bash modules / routines for any of the below scripts. Scripts for packages and more (including Netflix!)</li>
-<li>utilities/ - various scripts to handle small parts of the SteamOS-Tools repository (plugable objects) and standalone tools for use.</li>
+<li>docs/ - Various documentation. Previously hosted script documentation that is now on teh wiki.</li>
+<li>ext-game-installers/ - Game installers for games outside Steam (e.g. GZDoom).</li>
+<li>extra/ - Various extra scripts</li>
+<li>game-fixes - A location to store some small deployable fixes for games.</li>
+<li>scriptmodules/ - Plugable bash modules / routines for any of the below scripts. Scripts for packages and more.</li>
+<li>utilities/ - various scripts to handle small parts of the SteamOS-Tools repository (plugable objects), build scripts, and standalone tools for use.</li>
 <li>README.md - This file.</li>
+<li>AUTHORS.md - Contributions, attributions, and more</li>
+<li>LICENCE.md - License for this repository. Share all the things! ZOMGOMGBBQHELICOPTERZ</li>
 <li>add-debian-repos.sh - adds debian repositories for installing Debian software.</li>
+<li>changelog.md - Changes made to repository and tools</li>
+<li>contributing.md - Guidelines for repository contributions</li>
 <li>desktop-software.sh - script to install custom and bulk Debian desktop software packages, as well as special additional packages/utilities, such as gameplay recording, "web apps," and more. Please see the readme file in docs/ for the full listing of options.</li>
 <li>disclaimer.md - safety warnings for this repository.</li>
 </ul>
@@ -113,33 +119,39 @@ git pull
 
 <ul>
 <li><a href="https://youtu.be/h-gdPWjZlb4">SteamOS-Tools introductory video</a></li>
-<li><a href="https://www.youtube.com/watch?v=4wcIWG-WsXY">Retroarch demonstration video (courtesy of Ryochan7)</a></li>
+<li><a href="https://www.youtube.com/channel/UCkAs7k_xDG0pBD82T1YiD6g">Libregeek on Youtube</a></li>
+<li>For all other videos and tutorials, please see the <a href="https://github.com/ProfessorKaos64/SteamOS-Tools/wiki/Videos-and-Tutorials">Videos and Tutorials</a> wiki page</li>
 </ul>
 
 <h1>
 <a id="branches" class="anchor" href="#branches" aria-hidden="true"><span class="octicon octicon-link"></span></a>Branches</h1>
 
-<p>There are four main branches at the moment</p>
+<p>There are three main branches at the moment</p>
 
 <p><code>alchemist</code><br>
-Alchemist branch. Due to Brewmaster being usable now, this branch is not as up to date.<br>
-<code>brewmaster</code><br>
-Brewmaster branch. Default branch for repository.<br>
-<code>testing-a</code><br>
-Branch where new scripts are made, larger alterations to existing ones implemented, and more for alchemist.<br>
-<code>testing-b</code><br>
-Branch where new scripts are made, larger alterations to existing ones implemented, and more for brewmaster.  </p>
+Only contains a modified <code>add-debian-repos.sh</code>. Only intended for some legacy package testing right now.  </p>
+
+<p><code>brewmaster</code><br>
+Brewmaster branch. Default branch for repository.  </p>
+
+<p><code>testing-b</code><br>
+Branch where some new scripts are made. Larger alterations to existing ones implemented, and more for brewmaster.  </p>
 
 <h1>
-<a id="pull-requests--suggestions" class="anchor" href="#pull-requests--suggestions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pull requests / suggestions</h1>
+<a id="pull-requests--package-requests--suggestions" class="anchor" href="#pull-requests--package-requests--suggestions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pull requests / package requests / suggestions</h1>
 
 <p>Please submit any issues / suggestions to the issues tracker on the right hand side of this page
-or any corrections (with justification) as a Pull Request. Have a cool script or method to enhance SteamOS? Send it over! Your name will be added to the script header and the contributing.md file. </p>
+or any corrections (with justification) as a Pull Request. Have a cool script or method to enhance SteamOS? Send it over! Your name will be added to the script header and the AUTHORS.md file. I will also take requests for packages <em>not</em> found within Debian Jessie, or those that require extra work to work/install.</p>
 
 <h1>
 <a id="troubleshooting" class="anchor" href="#troubleshooting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Troubleshooting</h1>
 
 <p>Most scripts in the main folder of the repository write stdout and stderr to <code>log.txt</code> in the current directory after completion. Please check this file before submitting any issues or pull requests.</p>
+
+<h1>
+<a id="donations" class="anchor" href="#donations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Donations</h1>
+
+<p>If you wish to support the work here, hosting costs for packages, and more, you can do so monthly at <a href="https://www.patreon.com/user?u=60834&amp;ty=h">Patreon.com</a>, or make a one time donation over at <a href="http://www.libregeek.org/">http://www.libregeek.org/</a>. You can see a list of the amazing folks who have contributed to SteamOS-Tools, in the AUTHORS.md file.</p>
         </section>
 
         <aside id="sidebar">
