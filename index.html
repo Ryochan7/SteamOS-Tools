@@ -56,33 +56,38 @@
 
 <p>There is now a Debian personal repository hosted at packages.libregeek.org. Be sure to check out the "hosted packages" section below! The wiki entry also contains repository information if you should wish to add the repository manually.</p>
 
-<p><a href="https://github.com/ProfessorKaos64/SteamOS-Tools/wiki/SteamOS-Tools-Repository">SteamoS-Tools Repository</a></p>
-
-<p>Most package build scripts are hosted in a dedicatd GitHub repository, <a href="https://github.com/ProfessorKaos64/SteamOS-Tools-Packaging">SteamOS-Tools-Packaging</a>.</p>
+<ul>
+<li><a href="https://github.com/ProfessorKaos64/SteamOS-Tools/wiki/SteamOS-Tools-Repository">SteamoS-Tools repository</a></li>
+<li><a href="https://github.com/ProfessorKaos64/SteamOS-Tools-Packaging">SteamOS-Tools-Packaging GitHub</a></li>
+<li><a href="http://steamos-tools-stats.libregeek.org">SteamOS-Tools site/package statistics</a></li>
+</ul>
 
 <h1>
 <a id="usage--installation" class="anchor" href="#usage--installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage / Installation</h1>
 
 <p>Please make sure you have enabled desktop mode (Settings &gt; Interface &gt; Enable access to the Linux desktop), and aset your password for the dekstop user with <code>passwd</code>.</p>
 
-<p>To clone this repository to your local computer, you will need the <code>git</code> software package to clone the repository. The command is included below in the first line below if you do not know it.</p>
+<p>To clone this repository to your local computer, you will need the <code>git</code> software package to clone the repository. The command is included below in the first line below if you do not know it. Updating is very important for fixes and new features.</p>
 
 <pre><code>sudo apt-get install git
 git clone https://github.com/ProfessorKaos64/SteamOS-Tools
 cd SteamOS-Tools/
 </code></pre>
 
-<p>To update your local copy of files:</p>
-
-<pre><code>cd SteamOS-Tools/
-git pull
-</code></pre>
-
-<p>There is also a testing branch for this repository, but I advise against using it.</p>
-
 <p>Normal script execution, sans arguments, goes a little bit like:</p>
 
 <pre><code>./script-name.sh
+</code></pre>
+
+<h1>
+<a id="updating" class="anchor" href="#updating" aria-hidden="true"><span class="octicon octicon-link"></span></a>Updating</h1>
+
+<p>Be aware that any pacakges installed via the Libregeek package repository will be upgraded during the silent unattended upgrades process in SteamOS (Settings &gt; System) when a new version is available in the package pool. This updates, like Debian and Valve's upgrades, are processed on shutdown.</p>
+
+<p><em>Please</em> regulary check for updates to SteamOS-Tools. To update your local copy of files for this repository:</p>
+
+<pre><code>cd SteamOS-Tools/
+git pull
 </code></pre>
 
 <h2>
@@ -94,7 +99,8 @@ git pull
 <li>docs/ - Various documentation. Previously hosted script documentation that is now on teh wiki.</li>
 <li>ext-game-installers/ - Game installers for games outside Steam (e.g. GZDoom).</li>
 <li>extra/ - Various extra scripts</li>
-<li>game-fixes - A location to store some small deployable fixes for games.</li>
+<li>game-fixes/ - A location to store some small deployable fixes for games.</li>
+<li>launchers/ - Script launchers for various software</li>
 <li>scriptmodules/ - Plugable bash modules / routines for any of the below scripts. Scripts for packages and more.</li>
 <li>utilities/ - various scripts to handle small parts of the SteamOS-Tools repository (plugable objects), build scripts, and standalone tools for use.</li>
 <li>README.md - This file.</li>
